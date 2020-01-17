@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+x=5
+y=10
+echo "$x and $y"
+
+#rm gapsv2_classification.py
+
+source ~/my_project/tf3_gpu/bin/activate
+jupyter nbconvert --to python gapsv2_classification.ipynb 
+python gapsv2_classification.py
+
+rm gapsv2_classification.py
